@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">CRUD</string>
+    <string-array name="departments">
+        <item>Select year</item>
+        <item>Computer</item>
+        <item>IT</item>
+        <item>AI and DS</item>
+        <item>Extc</item>
+    </string-array>
+
+</resources>
