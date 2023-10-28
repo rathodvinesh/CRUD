@@ -1,10 +1,12 @@
 package com.example.crud.form
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.widget.RadioButton
 import android.widget.Toast
+import com.example.crud.MainActivity
 import com.example.crud.R
 import com.example.crud.databinding.ActivityReadFormBinding
 import com.google.firebase.database.DatabaseReference
@@ -71,6 +73,11 @@ class ReadForm : AppCompatActivity() {
             }.addOnFailureListener {
                 Toast.makeText(this, "Data cannot be fetch", Toast.LENGTH_SHORT).show()
             }
+        }
+
+        binding.backBtn.setOnClickListener {
+            startActivity(Intent(this@ReadForm, MainActivity::class.java))
+            finish()
         }
     }
 }

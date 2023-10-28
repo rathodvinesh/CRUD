@@ -13,6 +13,9 @@
         android:theme="@style/Theme.CRUD"
         tools:targetApi="31">
         <activity
+            android:name=".form.DeleteForm"
+            android:exported="false" />
+        <activity
             android:name=".form.UpdateForm"
             android:exported="false" />
         <activity

@@ -115,11 +115,11 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/readBtn"
+        android:id="@+id/deleteBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Read"
+        android:text="Delete"
         android:textSize="18sp" />
 
     <Button

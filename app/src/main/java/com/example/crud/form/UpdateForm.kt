@@ -80,6 +80,7 @@ class UpdateForm : AppCompatActivity() {
                 .addOnSuccessListener {
                     Toast.makeText(this, "Data updated successfully", Toast.LENGTH_SHORT).show()
                     startActivity(Intent(this@UpdateForm, MainActivity::class.java))
+                    finish()
                 }
                 .addOnFailureListener {
                     Toast.makeText(this, "Data update failed", Toast.LENGTH_SHORT).show()

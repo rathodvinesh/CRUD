@@ -1,5 +1,6 @@
 package com.example.crud.form
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -30,23 +31,18 @@ class create_form : AppCompatActivity() {
     private lateinit var uploadButton: Button
     private lateinit var spinnerValue : String
 
+    @SuppressLint("SuspiciousIndentation")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 //        setContentView(R.layout.activity_create_form)
         binding = ActivityCreateFormBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-//        etName = findViewById(R.id.etName)
-////        deptSpinner = findViewById(R.id.spinnerDept)
-////        radioGroup = findViewById(R.id.rgGender)
-////        createButton = findViewById(R.id.uploadBtn)
         //binding
         etName = binding.etName
         deptSpinner = binding.spinnerDept
         radioGroup = binding.rgGender
-//        uploadButton = binding.uploadBtn
-
-
+        uploadButton = binding.uploadBtn
 
 //        deptSpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
 //            override fun onItemSelected(
@@ -80,6 +76,6 @@ class create_form : AppCompatActivity() {
                 }.addOnCanceledListener {
                         Toast.makeText(this, "Cannot upload data", Toast.LENGTH_SHORT).show()
                     }
-        }
+            }
     }
 }

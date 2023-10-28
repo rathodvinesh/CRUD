@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.crud.databinding.ActivityMainBinding
+import com.example.crud.form.DeleteForm
 import com.example.crud.form.ReadForm
 import com.example.crud.form.UpdateForm
 import com.example.crud.form.create_form
@@ -21,14 +22,22 @@ class MainActivity : AppCompatActivity() {
 
         binding.createButton.setOnClickListener{
             startActivity(Intent(this@MainActivity, create_form::class.java))
+            finish()
         }
 
         binding.readButton.setOnClickListener{
             startActivity(Intent(this@MainActivity, ReadForm::class.java))
+            finish()
         }
 
         binding.updateButton.setOnClickListener {
             startActivity(Intent(this@MainActivity, UpdateForm::class.java))
+            finish()
+        }
+
+        binding.deleteButton.setOnClickListener {
+            startActivity(Intent(this@MainActivity, DeleteForm::class.java))
+            finish()
         }
     }
 }
